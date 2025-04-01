@@ -1,43 +1,66 @@
 .info-content{
-    display: flex;
+    display: grid;
     flex-direction: row;
     align-items: center;
+    grid-template-columns: 1fr 1fr;
+    
+
 }
 .info-subtitle{
     display: flex;
     flex-direction: column;
     font-size: 64px;
+    text-align: center;
+    
+    
 }
 .info-title{
 font-size: 20px;
 }
 .info-descr{
     font-size: 18px;
-    padding-left: 134px;
     display: flex;
     flex-direction: column;
-    align-items: right;
+    align-items: left;
+    line-height: 140%;
+}
+.info{
+    justify-content: center;
+    display: flex;
 }
 
 .advantages-content{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
+    grid-template-columns: 1fr 1fr ;
+  
 }
 .advantages-subtitle{
     display: flex;
     flex-direction: column;
     font-size: 64px;
+    text-align: center;
 }
 .advantages-title{
 font-size: 20px;
 }
 .advantages-descr{
     font-size: 18px;
-    padding-left: 134px;
     display: flex;
     flex-direction: column;
-    align-items: right;
+    align-items: left;
+    line-height: 140%;
+}
+.advantages-text{
+    display: grid;
+    flex-direction: row;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+}
+.advantages{
+    justify-content: center;
+    display: flex; 
 }
 .advantages-images{
     display: flex;
@@ -45,39 +68,51 @@ font-size: 20px;
     align-items: center;
     gap: 104px; 
 }
+
 .advantages-image_left{
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 .advantages-image_right{
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
-.advantages-desc{
-    font-size: 20px;
+.advantages-descr{
+    font-size: 18px;
 } 
+.advantages-descr_bottom{
+    font-size: 20px;
+}
 
+.delivery{
+    justify-content: center;
+    display: flex; 
+}
 .delivery-content{
-    display: flex;
+    display: grid;
     flex-direction: row;
     align-items: center;
+    grid-template-columns: 1fr 1fr;
 }
 .delivery-subtitle{
     display: flex;
     flex-direction: column;
     font-size: 64px;
+    text-align: center;
 }
 .delivery-title{
 font-size: 20px;
 }
 .delivery-descr{
     font-size: 18px;
-    padding-left: 134px;
 }
 .delivery-text{
     display: flex;
     flex-direction: column;
-    align-items: right;
+    align-items: left;
+    text-align: left;
 }
 .delivery-button{
     font-size: 20px;
@@ -85,21 +120,31 @@ font-size: 20px;
 .delivery-bottom{
     display: flex;
     flex-direction: row;
-    align-items: right;
 }
 .main-title{
-    display: flex;
     font-size: 54px;
-    align-items: center;
+    position: absolute;
+    left: 21%;
+    bottom: 150px;
+    color: white;
 }
 .main{
     background-image:url(assets/photo_2025-03-12_16-28-42.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     width: 1920px;
+    height: 100vh;
     max-width: 100%;
 }
 
+
+.contacts{
+    justify-content: center;
+    display: flex; 
+}
+.contacts-title_right{
+    font-size: 20px;
+}
 .contacts-time{
     display: flex;
     flex-direction: row;
@@ -113,17 +158,76 @@ font-size: 20px;
     flex-direction: column;
 }
 .contacts-text{
-    display: flex;
-    flex-direction: column;
     font-size: 18px;
-    align-items: left;
 }
 .contacts-caption{
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: center ;
+    color: #b59571;
 }
 .contacts-number{
     font-size: 64px;
 }
+.contacts-content{
+    display: grid;
+    flex-direction: row;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+}
+.contacts-item{
+    font-size: 16px;
+}
 
+.contacts-location{
+   color: white; 
+   border: medium solid;
+   background-clip: content-box;
+   background-color: #5b5b5b; 
+   
+}
+.container{
+    width: 1076px;   
+}
+.social{
+    background-image:url(assets/photo_2025-03-12_16-28-42.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 1920px;
+    height: 100vh;
+    max-width: 100%;
+}
+.social-title{
+    font-size: 20px;
+}
+.social-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+.social-form{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    text-align: justify;
+}
+.numbers-form{
+    display: flex;
+    flex-direction: row;
+    gap: 18px;
+    align-items: center;
+}
+.form-quantity{
+    width: 136px;
+}
+.form-time{
+    width: 136px;
+}
+.form-name{
+    width: 296px;
+}
+.form-telephone{
+    width: 296px;
+}
