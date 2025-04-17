@@ -120,6 +120,14 @@ font-size: 20px;
 .delivery-bottom{
     display: flex;
     flex-direction: row;
+    gap: 30px;
+}
+.delivery-button_left{
+    color: white;
+    background-color: #b59571;
+}
+.delivery-button_right{
+    border: 1px solid black
 }
 .main-title{
     font-size: 54px;
@@ -146,45 +154,85 @@ font-size: 20px;
     font-size: 20px;
 }
 .contacts-time{
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns:196px 196px;
+    column-gap:50px;
+    row-gap: 24px;
+
 }
-.contacts-time__left{
-    display: flex;
-    flex-direction: column;
-}
-.contacts-time__right{
-    display: flex;
-    flex-direction: column;
-}
+
 .contacts-text{
     font-size: 18px;
 }
 .contacts-caption{
-    display: flex;
     flex-direction: row;
-    align-items: center ;
+    align-items: flex-end;
     color: #b59571;
 }
 .contacts-number{
     font-size: 64px;
+    margin-block-start: 0;
+    margin-block-end: 0;
 }
 .contacts-content{
     display: grid;
     flex-direction: row;
     align-items: center;
     grid-template-columns: 1fr 1fr;
+    position: relative;
 }
 .contacts-item{
     font-size: 16px;
+    
+}
+.contacts-telephone{
+    font-size: 16px;
+   
 }
 
 .contacts-location{
    color: white; 
-   border: medium solid;
    background-clip: content-box;
-   background-color: #5b5b5b; 
+   background-color: #5b5b5b;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
    
+}
+
+
+.contacts-button_left{
+    color: white;
+    background-color: #b59571;
+}
+.contacts-button_right{
+    color: white;
+    background-color: #5b5b5b;
+    border: 1px solid white;
+}
+.contacts-line{
+  display: flex;
+  flex-direction: row;
+   background-color: black;
+   align-items: center;
+   margin: auto;
+
+
+}
+
+
+.politica{
+    color: white;
+    text-align: center;
+    margin: auto;
+   
+}
+.design{
+    color: white;
+    text-align: right;
+    
+    
 }
 .container{
     width: 1076px;   
@@ -205,6 +253,7 @@ font-size: 20px;
     flex-direction: column;
     align-items: center;
    
+   
 }
 .social-form{
     display: flex;
@@ -212,6 +261,11 @@ font-size: 20px;
     gap: 30px;
     align-items: center;
     text-align: justify;
+
+}
+.social-button{
+    color: white;
+    background-color: #b59571;
 }
 .numbers-form{
     display: flex;
@@ -221,13 +275,60 @@ font-size: 20px;
 }
 .form-quantity{
     width: 136px;
+    background-color: black;
+    border: 1px solid white;
 }
 .form-time{
     width: 136px;
+    background-color: black;
+    border: 1px solid white;
 }
 .form-name{
     width: 296px;
+    background-color: black;
+    border: 1px solid white;
 }
 .form-telephone{
     width: 296px;
+    background-color: black;
+    border: 1px solid white;
+}
+.social-image{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.services-logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.services-meny{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    gap: 60px;
+}
+.services-button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 24px;
+    color: white;
+    background-color: #b59571;
+}
+.services-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.services{
+    background-color: black;
+}
+.services-title{
+    font-size: 48px;
+}
+.services-logo{
+    gap: 30px;
 }
