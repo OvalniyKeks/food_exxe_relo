@@ -9,14 +9,16 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<section>
+
+<body>
+
     <section id="main" class="main">
         <h1 class="main-title">
             Видовой ресторан Food Exxe Relo <br> на Крестовском острове
         </h1>
     </section>
     <section id="info" class="info">
-        <div class="container">
+        <div class="container-small">
             <h1 class="info-title">
                 о ресторане
             </h1>
@@ -26,7 +28,8 @@
                 </h1>
                 <div class="info-descr">
                     <p class="info-lead">
-                        Sed vel ornare ut rhoncus, ac ut nibh. Amet at sit et nibh. In lectus phasellus non ornare eget
+                        Sed vel ornare ut rhoncus, ac ut nibh. Amet at sit et nibh. In lectus phasellus non ornare
+                        eget
                         velit. Facilisi urna, tristique dui, rhoncus, dolor. Tincidunt enim gravida dignissim leo
                         pulvinar
                         sit volutpat nulla vestibulum.
@@ -37,7 +40,8 @@
                         pharetra
                         at porttitor. Fringilla luctus pretium in viverra. In adipiscing tempor amet malesuada
                         ullamcorper
-                        ut sagittis. Dui, scelerisque vulputate risus massa dictum. Cras at quis in eu, faucibus feugiat
+                        ut sagittis. Dui, scelerisque vulputate risus massa dictum. Cras at quis in eu, faucibus
+                        feugiat
                         vel. At.
                     </p>
                 </div>
@@ -45,7 +49,7 @@
         </div>
     </section>
     <section id="advantages" class="advantages">
-        <div class=container>
+        <div class=container-small>
             <h1 class="advantages-title">
                 меню
             </h1>
@@ -85,7 +89,7 @@
         </div>
     </section>
     <section id="delivery" class="delivery">
-        <div class="container">
+        <div class="container-small">
             <h1 class="delivery-title">
                 доставка
             </h1>
@@ -193,45 +197,50 @@
                     </div>
                 </div>
                 <div class="contacts-location">
-                    <ul class="contacts-listbox">
-                        <li class="contacts-item">
-                            Санкт-Петербург,Северная дорога,11
-                        </li>
-                        <li class="contacts-telephone">
-                            +7(921)777-77-77
-                        </li>
-                    </ul>
-                    <p class="contacts-title__right">
-                        Время работы
-                    </p>
-                    <ul class="contacts-list">
-                        <li class=contacts-item_right>
-                            Вск-Чт с 12:00 до 23:00
-                        </li>
-                        <li class="contacts-item_right">
-                            Пт-Сб с 12:00 до 03:00
-                        </li>
-                    </ul>
-                    <button class="contacts-button_left">
-                        бронь столика
-                    </button>
-                    <button class="contacts-button_right">
-                        задать вопрос
-                    </button>
+                    <div class="contacts-location__inner">
+                        <ul class="contacts-listbox">
+                            <li class="contacts-item">
+                                Санкт-Петербург,Северная дорога,11
+                            </li>
+                            <li class="contacts-item">
+                                +7(921)777-77-77
+                            </li>
+                        </ul>
+                        <p class="contacts-title__time">
+                            Время работы
+                        </p>
+                        <ul class="contacts-list">
+                            <li class=contacts-item_time>
+                                <p class="contacts-day">Вск-Чт</p>
+                                 <p class="time">с 12:00 до 23:00</p>
+                            </li>
+                            <li class="contacts-item_time">
+                                <p class="contacts-day">Пт-Сб</p> <p class="time"> с 12:00 до 03:00</p>
+                            </li>
+                        </ul>
+                        <button class="contacts-button_left">
+                            бронь столика
+                        </button>
+                        <button class="contacts-button_right">
+                            задать вопрос
+                        </button>
+                    </div>
                 </div>
                 <img class="contacts-image" src="assets/map.png">
             </div>
-            <div class="contacts-line">
-                <img class="image-logo" src="assets/logo.png">
-                <p class="politica">
-                    Политика конфиденциальности
-                </p>
-                <p class="design">
-                    Дизайн d-e-n.ru
-                </p>
-            </div>
         </div>
     </section>
+    <footer class="footer">
+        <div class="footer-inner">
+            <img class="image-logo" src="assets/logo.png">
+            <p class="politica">
+                Политика конфиденциальности
+            </p>
+            <p class="design">
+                Дизайн d-e-n.ru
+            </p>
+        </div>
+    </footer>
     <section id="social" class="social">
         <div class="social-container">
             <div class="social-image">
@@ -284,9 +293,6 @@
     </section>
 
 
-</section>
-
-<body>
 
 </body>
 
