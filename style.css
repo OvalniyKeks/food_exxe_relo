@@ -1,10 +1,27 @@
 body {
     font-family: 'Circe';
 }
-
+.services{
+    position: fixed;
+    top: -100%;
+    width: 100%;
+    z-index: 2;
+    transition: top 0.3s ease-in-out;
+}
 .info-content {
     display: flex;
     justify-content: space-between;
+}
+.title-content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 80px;
+    margin-top: 150px;
+}
+.image-dash{
+    margin-left: 30px;
+    max-width: 60px;
 }
 
 .info-subtitle {
@@ -13,11 +30,15 @@ body {
     font-size: 64px;
     text-align: left;
     font-weight: 700;
-
+line-height: 1.2;
 }
-
+.info-lead{
+    margin-bottom: 16px;
+}
 .info-title {
     font-size: 20px;
+    font-weight: 700;
+   
 }
 
 .info-descr {
@@ -29,6 +50,7 @@ body {
     max-width: 526px;
     width: 100%;
     line-height: 1.4;
+   
 }
 
 .info {
@@ -51,13 +73,18 @@ body {
     font-size: 64px;
     text-align: left;
     font-weight: 700;
+    line-height: 1.2;
 
 }
 
 .advantages-title {
     font-size: 20px;
+    font-weight: 700;
+   
 }
-
+.advantages-lead{
+    margin-bottom: 16px;
+}
 .advantages-descr {
     font-size: 18px;
     display: flex;
@@ -66,6 +93,8 @@ body {
     margin-left: 68px;
     max-width: 526px;
     width: 100%;
+    line-height: 1.4;
+    margin-bottom: 80px;
 }
 
 .advantages-text {
@@ -99,12 +128,17 @@ body {
     align-items: center;
 }
 
-.advantages-descr {
-    font-size: 18px;
+.content-bottom{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 80px;
+    margin-top: 24px;
 }
 
-.advantages-descr_bottom {
+.advantages-bottom {
     font-size: 20px;
+    
 }
 
 .delivery {
@@ -123,14 +157,19 @@ body {
     font-size: 64px;
     text-align: left;
     font-weight: 700;
+    line-height: 1.2;
 }
 
 .delivery-title {
     font-size: 20px;
+    font-weight: 700;
+   
 }
 
 .delivery-descr {
     font-size: 18px;
+    line-height: 1.4;
+    margin-bottom: 60px;
 }
 
 .delivery-text {
@@ -150,15 +189,18 @@ body {
     display: flex;
     flex-direction: row;
     gap: 30px;
+   
 }
 
 .delivery-button_left {
     color: white;
     background-color: #b59571;
+    padding: 15px 30px;
 }
 
 .delivery-button_right {
-    border: 1px solid black
+    border: 1px solid black;
+    padding: 15px 30px;
 }
 
 .main-title {
@@ -168,7 +210,19 @@ body {
     bottom: 150px;
     color: white;
 }
-
+.main-head{
+    flex-direction: row;
+    display: flex;
+    gap: 50px;
+    color: white;
+    align-items: center;
+    justify-content: right;
+    padding: 30px 100px;
+}
+.main-button{
+    background-color: #b59571; 
+    padding: 10px 20px;
+}
 .main {
     background-image: url(assets/photo_2025-03-12_16-28-42.jpg);
     background-repeat: no-repeat;
@@ -177,6 +231,36 @@ body {
     height: 100vh;
     max-width: 100%;
 }
+.main-aside{
+    display: flex;
+    flex-direction: column;
+    background-color: #333333;
+    position: absolute;
+    left: 0%;
+    bottom: 0%;
+    top: 0%;
+    align-items: center;
+    justify-content: space-between;
+    max-width:120px ;
+    width: 100%;
+}
+.main-top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 30px;
+    gap: 20px;
+   
+}
+.main-bottom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 30px;
+}
 
 
 .contacts {
@@ -184,8 +268,10 @@ body {
     display: flex;
 }
 
-.contacts-title_right {
+.contacts-title {
     font-size: 20px;
+    font-weight: 700;
+   
 }
 
 .contacts-time {
@@ -303,11 +389,12 @@ body {
 .footer {
     display: flex;
     flex-direction: row;
-    background-color: black;
+    background-color: #333333;
     align-items: center;
     margin: auto;
-
-
+    margin-top: 100px;
+    width: 1920px;
+    height: 120px;
 }
 
 .footer-inner {
@@ -346,23 +433,43 @@ body {
 }
 
 .social {
-    background-image: url(assets/photo_2025-03-12_16-28-42.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+   background-color:rgba(0, 0, 0, 0.5);
     width: 1920px;
     height: 100vh;
     max-width: 100%;
+    z-index: 2;
+    transition: top 0.3s ease-in-out;
+    top: -100%;
+    position: fixed;
+    display: flex;
+
 }
 
 .social-title {
     font-size: 20px;
+    margin-bottom: 40px;
+    line-height: 1.4;
 }
 
 .social-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+  color: white;
+  background-color: black;
+  width: 416px;
+  height: 572px;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
+  
+
+
+
+    
 
 }
 
@@ -373,11 +480,15 @@ body {
     align-items: center;
     text-align: justify;
 
+
 }
 
 .social-button {
     color: white;
     background-color: #b59571;
+    padding: 10px 20px;
+    margin-top: 40px;
+    margin-bottom: 60px;
 }
 
 .numbers-form {
@@ -389,32 +500,47 @@ body {
 
 .form-quantity {
     width: 136px;
+    height: 52px;
     background-color: black;
     border: 1px solid white;
+    padding: 15px 20px;
 }
 
 .form-time {
     width: 136px;
+    height: 52px;
     background-color: black;
     border: 1px solid white;
+    padding: 15px 20px;
 }
 
 .form-name {
     width: 296px;
+    height: 52px;
     background-color: black;
     border: 1px solid white;
+    padding: 15px 20px;
 }
 
 .form-telephone {
     width: 296px;
+    height: 52px;
     background-color: black;
     border: 1px solid white;
+    padding: 15px 20px;
 }
-
+.image-close{
+    margin-top: 20px;
+    margin-left: 356px;
+   
+}
 .social-image {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 40px;
+    
+   
 }
 
 .services-logo {
@@ -429,6 +555,7 @@ body {
     align-items: center;
     color: white;
     gap: 60px;
+    margin-top: 153px;
 }
 
 .services-button {
@@ -438,7 +565,10 @@ body {
     font-size: 24px;
     color: white;
     background-color: #b59571;
+    padding: 10px 20px;
 }
+
+
 
 .services-container {
     display: flex;
@@ -448,6 +578,9 @@ body {
 
 .services {
     background-color: black;
+    width: 1920px;
+    height: 100vh;
+    max-width: 100%;
 }
 
 .services-title {
@@ -456,4 +589,154 @@ body {
 
 .services-logo {
     gap: 30px;
+    margin-top: 30px;
+}
+.services-frame{
+    margin-top: 153px;
+}
+
+.food{
+    width: 1920px;
+    max-width: 100%;
+}
+
+
+.food-title{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+.menu-title{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4; 
+}
+.food-images{
+    
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    flex-direction: row;
+    grid-template-columns: 306px 306px 306px 306px;
+    row-gap: 25px;
+    column-gap: 26px;
+    margin-top: 60px;
+    
+}
+.food-name{
+    text-align: center;
+    font-weight: 700; 
+    font-size: 20px;
+    line-height: 1.4; 
+    margin-top: 30px;
+}
+.food-caption{
+    flex-direction: row;
+    margin-top: 25px;
+    
+    
+    
+}
+.food-price{
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.food-button{
+    color: white;
+    background-color: #b59571;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.4;
+    
+}
+.breakfast{
+    text-align: center;
+    
+}
+.cards{
+    flex-direction: column;
+    display: flex;
+    width: 416px;
+    margin-right: 134px;
+}
+.dish-card{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.dish-name{
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1.2;
+    color: #333333;
+    margin-top: 80px;
+}
+.dish-price{
+     font-weight: 700;
+    font-size: 32px;
+    line-height: 1.2;
+    color: #333333;
+}
+.dish-wight{
+     font-weight: 700;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #333333;
+}
+.dish-quantity{
+     font-weight: 700;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #333333;
+    margin-top: 30px;
+}
+
+.dish-button__right{
+    padding: 15px 30px;
+    color: white;
+    background-color: #b59571;
+    margin-left: 20px;
+}
+.dish-button{
+    flex-direction: row;
+    display: flex;
+   margin-top: 24px;
+}
+.dish-products{
+ font-weight: 700;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #333333;
+}
+.products-price{
+ font-weight: 700;
+    font-size: 20px;
+    line-height: 1.4;
+    color: #333333;
+}
+.products-list{
+    margin-top: 20px;
+}
+.dish-caption{
+    margin-top: 70px;
+}
+.cards{
+    margin-top: 80px;
+}
+.card-small{
+    margin-top: 24px;
+}
+.dish-title{
+    flex-direction: row;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 116px;
 }
