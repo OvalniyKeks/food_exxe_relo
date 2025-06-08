@@ -102,7 +102,7 @@ const products = [
 async function setCard() {
 
     const blockProducts = document.querySelector('.food-images')
-    console.log(blockProducts)
+
     for (const product of products) {
         const element = ` <div class="breakfast product-card">
                 <img class="image-breakfast" src="${product.image}">
@@ -114,27 +114,31 @@ async function setCard() {
             </div>`
         blockProducts.insertAdjacentHTML("afterbegin", element);
     }
-
-    await new Promise(
-        resolve => requestAnimationFrame(resolve)
-    );
+    console.log(blockProducts)
+    // await new Promise(
+    //     resolve => requestAnimationFrame(resolve)
+    // );
 
 }
 
-async function setProduct() {
-    await setCard()
-
-
-    //добавляем клик на карточку товара
-    const productsCard = document.querySelectorAll(".product-card")
-    console.log(productsCard)
-    if (productsCard) {
-        productsCard.forEach((card) => {
-            console.log(card)
-            card.addEventListener('click', function () {
-                console.log('click по карточке:', card)
-            })
+function setProduct() {
+    setCard()
+    const blockProducts = document.querySelector('.food-images')
+    if (blockProducts) {
+        blockProducts.addEventListener('click', function (event) {
+            console.log(event)
         })
     }
+    //добавляем клик на карточку товара
+    // const productsCard = document.querySelectorAll(".product-card")
+    // console.log(productsCard)
+    // if (productsCard) {
+    //     productsCard.forEach((card) => {
+    //         console.log(card)
+    //         card.addEventListener('click', function () {
+    //             console.log('click по карточке:', card)
+    //         })
+    //     })
+    // }
 }
 setProduct() 
