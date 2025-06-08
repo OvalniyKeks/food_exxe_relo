@@ -1,6 +1,9 @@
 body {
     font-family: 'Circe';
 }
+.button-count{
+    color: white;
+}
 .services{
     position: fixed;
     top: -100%;

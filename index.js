@@ -62,9 +62,9 @@ const products = [
         price: "190"
     },
     {
-      image: "assets/Rectangle 57 (4).svg",
-      name: "Каша с ягодами и кедровыми орехами",
-      price: "450"  
+        image: "assets/Rectangle 57 (4).svg",
+        name: "Каша с ягодами и кедровыми орехами",
+        price: "450"
     },
     {
         image: "assets/Rectangle 57 (5).svg",
@@ -99,11 +99,18 @@ const products = [
 
 ]
 // общий блок товаров
-const blockProducts = document.querySelector('.food-images')
-console.log(blockProducts)
+function promiseFor() {
+  return new Promise(function (resolve, reject) {
+    setCard()
+    resolve()
+  })
+}
+function setCard() {
 
-for (const product of products) {
-    const element = ` <div class="breakfast">
+    const blockProducts = document.querySelector('.food-images')
+    console.log(blockProducts)
+    for (const product of products) {
+        const element = ` <div class="breakfast product-card">
                 <img class="image-breakfast" src="${product.image}">
                 <p class="food-name">${product.name}</p>
                 <div class="food-caption">
@@ -111,5 +118,24 @@ for (const product of products) {
                     <span class="food-button">В корзину</span>
                 </div>
             </div>`
-    blockProducts.insertAdjacentHTML("afterbegin", element);
+        blockProducts.insertAdjacentHTML("afterbegin", element);
+    }
+
 }
+async function setProduct() {
+    await promiseFor()
+
+
+    //добавляем клик на карточку товара
+    const productsCard = document.querySelectorAll(".product-card")
+    console.log(productsCard)
+    if (productsCard) {
+        productsCard.forEach((card) => {
+            console.log(card)
+            card.addEventListener('click', function () {
+                console.log(card)
+            })
+        })
+    }
+}
+setProduct() 
