@@ -99,13 +99,7 @@ const products = [
 
 ]
 // общий блок товаров
-function promiseFor() {
-  return new Promise(function (resolve, reject) {
-    setCard()
-    resolve()
-  })
-}
-function setCard() {
+async function setCard() {
 
     const blockProducts = document.querySelector('.food-images')
     console.log(blockProducts)
@@ -121,9 +115,14 @@ function setCard() {
         blockProducts.insertAdjacentHTML("afterbegin", element);
     }
 
+    await new Promise(
+        resolve => requestAnimationFrame(resolve)
+    );
+
 }
+
 async function setProduct() {
-    await promiseFor()
+    await setCard()
 
 
     //добавляем клик на карточку товара
@@ -133,7 +132,7 @@ async function setProduct() {
         productsCard.forEach((card) => {
             console.log(card)
             card.addEventListener('click', function () {
-                console.log(card)
+                console.log('click по карточке:', card)
             })
         })
     }
