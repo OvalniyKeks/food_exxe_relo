@@ -102,43 +102,47 @@ const products = [
 async function setCard() {
 
     const blockProducts = document.querySelector('.food-images')
-
-    for (const product of products) {
-        const element = ` <div class="breakfast product-card">
-                <img class="image-breakfast" src="${product.image}">
-                <p class="food-name">${product.name}</p>
+   console.log(products.length) 
+   for (let id = products.length-1; id >= 0; id--) {
+        const element = ` <div class="breakfast product-card" data-id="${id}">
+                <img class="image-breakfast" src="${products[id].image}">
+                <p class="food-name">${products[id].name}</p>
                 <div class="food-caption">
-                    <span class="food-price">${product.price}₽</span>
+                    <span class="food-price">${products[id].price}₽</span>
                     <span class="food-button">В корзину</span>
                 </div>
             </div>`
         blockProducts.insertAdjacentHTML("afterbegin", element);
     }
     console.log(blockProducts)
-    // await new Promise(
-    //     resolve => requestAnimationFrame(resolve)
-    // );
+    await new Promise(
+        resolve => requestAnimationFrame(resolve)
+    );
 
 }
 
 function setProduct() {
     setCard()
-    const blockProducts = document.querySelector('.food-images')
-    if (blockProducts) {
-        blockProducts.addEventListener('click', function (event) {
-            console.log(event)
-        })
-    }
-    //добавляем клик на карточку товара
-    // const productsCard = document.querySelectorAll(".product-card")
-    // console.log(productsCard)
-    // if (productsCard) {
-    //     productsCard.forEach((card) => {
-    //         console.log(card)
-    //         card.addEventListener('click', function () {
-    //             console.log('click по карточке:', card)
-    //         })
+    // const blockProducts = document.querySelector('.food-images')
+    // if (blockProducts) {
+    //     blockProducts.addEventListener('click', function (event) {
+    //         console.log(event)
     //     })
     // }
+    //добавляем клик на карточку товара
+    const productsCard = document.querySelectorAll(".product-card")
+    console.log(productsCard)
+    if (productsCard) {
+        productsCard.forEach((card) => {
+            console.log(card)
+            card.addEventListener('click', function () {
+                console.log('click по карточке:', card)
+                console.log(card.dataset)
+                const selectProduct = products[card.dataset.id]
+                console.log(selectProduct)
+                window.location.href = `/product.html?image=${selectProduct.image}&name=${selectProduct.name}&price=${selectProduct.price}`
+            })
+        })
+    }
 }
 setProduct() 
